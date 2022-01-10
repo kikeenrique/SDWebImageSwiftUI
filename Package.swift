@@ -28,7 +28,7 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
             name: "SDWebImageSwiftUI",
-            dependencies: ["SDWebImage"],
+            dependencies: [.productItem(name: "SDWebImageDynamic", package: "SDWebImage", condition: .none)],
             path: "SDWebImageSwiftUI/Classes"
         )
     ]
